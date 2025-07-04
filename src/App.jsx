@@ -4,9 +4,7 @@ import Portfolio from "./components/ContentNew";
 
 function App() {
   return (
-    <div>
       <Portfolio />
-    </div>
   );
 }
 
