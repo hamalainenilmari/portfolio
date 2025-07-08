@@ -9,11 +9,11 @@ import betapp from "../images/betapp.jpg";
 
 export default function Portfolio() {
   return (
-    <div>
+    <div className='sm:text-sm'>
       <section id="header" className='w-full bg-white shadow-sm border-b border-gray-200'>
           <div className="flex flex-col py-4 sm:items-center">
             <h1 className="text-center font-bold text-gray-900">Ilmari Hämäläinen</h1>
-            <nav className="flex justify-center flex-row space-x-6 pt-1 sm:space-x-6 sm:justify-end">
+            <nav className="flex justify-center flex-row space-x-6 pt-1 sm:space-x-10 sm:justify-end">
               <a href="#about" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">About</a>
               <a href="#experience" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">Experience</a>
               <a href="#expertise" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">Expertise</a>
@@ -22,20 +22,20 @@ export default function Portfolio() {
           </div>
       </section>
 
-      <div className='md:max-w-7xl mx-auto'>
-        <section id='hero' className="pt-10 pb-6 md:py-15">
+      <div className='sm:max-w-4xl mx-auto'>
+        <section id='hero' className="pt-10 pb-6 sm:py-8">
           <div className="px-6 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
+            <p className="text-3xl sm:text-3xl font-bold text-gray-900 mb-6 tracking-tight sm:mb-3">
               Data Engineer & Full-Stack Developer
-            </h2>
-            <div className="text-lg text-gray-700 space-y-3 leading-relaxed max-w-xl mx-auto">
+            </p>
+            <div className="text-lg text-gray-700 space-y-3 leading-relaxed max-w-xl mx-auto sm:space-y-1 sm:text-base">
               <p className="font-semibold">Computer Science Master's Student at Aalto University (GPA: 4.4)</p>
               <p className="font-medium">Graduating November 2025</p>
               <p className="pb-2">
                 Languages: Finnish (native), English (proficient)
               </p>
             </div>
-            <div className="bg-gradient-to-r from-blue-50 to-emerald-50 p-6 rounded-lg text-left mb-8">
+            <div className="bg-gradient-to-r from-blue-50 to-emerald-50 p-6 rounded-lg text-left mb-8 sm:mb-4">
               <p className="text-gray-700 leading-relaxed">
                 Aspiring data engineer and full-stack web developer with hands-on industry experience at Fingrid Datahub. 
                 Currently completing a Master's Thesis on data analytics platform design for Datahub reporting as a full-time role at Fingrid. 
@@ -50,9 +50,9 @@ export default function Portfolio() {
           </div>
         </section>
 
-        <section id="experience" className="py-6 md:py-2 bg-white">
+        <section id="experience" className="py-6 sm:py-2 bg-white">
           <div className="mx-auto px-6">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+            <h3 className="text-3xl font-bold text-gray-900 mb-4 flex items-center gap-3 sm:text-2xl">
               Professional Experience
             </h3>
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
@@ -129,9 +129,9 @@ export default function Portfolio() {
           </div>
         </section>
 
-        <section id="expertise" className="py-6 md:py-14 bg-white">
+        <section id="expertise" className="py-6 sm:pt-8 bg-white">
           <div className="mx-auto px-6">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+            <h3 className="text-3xl font-bold text-gray-900 mb-4 flex items-center gap-3 sm:text-2xl">
               Technical Expertise & Education
             </h3>
 
@@ -274,9 +274,9 @@ export default function Portfolio() {
           </div>
         </section>
 
-        <section id="projects" className="py-6 md:py-1 bg-white">
+        <section id="projects" className="py-6 sm:pt-2 bg-white">
           <div className="mx-auto px-6">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Other Cool Projects</h3>
+            <h3 className="text-3xl font-bold text-gray-900 mb-4 sm:text-2xl">Other Cool Projects</h3>
             <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
               
               <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow duration-200">
@@ -356,14 +356,14 @@ export default function Portfolio() {
         </section>
       </div>
 
-      <section id="footer" className="w-full pt-10 pb-2 md:py-16 bg-gradient-to-r from-blue-50 to-emerald-50">
+      <section id="footer" className="w-full pt-10 pb-2 sm:py-8 bg-gradient-to-r from-blue-50 to-emerald-50">
         <div className="px-4 text-center">
           <h3 className="text-3xl font-bold text-gray-900 mb-4">Let's Build Something Great Together</h3>
-          <p className="text-lg text-gray-600 mb-8">
+          <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
             I am seeking Data Engineering or Full-Stack Web Development opportunities where I can leverage my 
             expertise in scalable data platforms, modern web technologies, and cloud-native architectures.
           </p>
-          <div className="flex flex-wrap justify-center flex-row space-x-2">
+          <div className="flex flex-wrap justify-center flex-row space-x-2 sm:space-x-8  sm:py-0">
             <a 
               href='https://www.linkedin.com/in/ilmari-h%C3%A4m%C3%A4l%C3%A4inen-8a3670260/' 
               className="bg-white hover:bg-gray-50 text-gray-700 px-8 py-3 rounded-lg border border-gray-200 flex items-center gap-2">
