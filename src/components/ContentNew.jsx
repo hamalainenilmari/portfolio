@@ -3,11 +3,24 @@ import { Github, ExternalLink, Mail, Linkedin, Code, Database, Globe, Award } fr
 import dh from "../images/datahub.png";
 import shed from "../images/shed.png";
 import sponza from "../images/sponza.png";
-import betapp_table from "../images/betapp_table.png";
-import betapp from "../images/betapp.jpg";
+import betapp_table from "../images/table.jpg";
+import betapp from "../images/betapp4.jpg";
+import arc from "../images/bdp_hybrid_architecture.png";
+
+
+
+import { useState } from 'react';
 
 
 export default function Portfolio() {
+
+  const [table_isOpen, table_setIsOpen] = useState(false);
+  const [betapp_isOpen, betapp_setIsOpen] = useState(false);
+  const [shed_isOpen, shed_setIsOpen] = useState(false);
+  const [sponza_isOpen, sponza_setIsOpen] = useState(false);
+  const [arc_isOpen, arc_setIsOpen] = useState(false);
+
+
   return (
     <div className='sm:text-sm'>
       <section id="header" className='w-full bg-white shadow-sm border-b border-gray-200'>
@@ -18,6 +31,7 @@ export default function Portfolio() {
               <a href="#experience" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">Experience</a>
               <a href="#expertise" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">Expertise</a>
               <a href="#projects" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">Projects</a>
+              <a href="#footer" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">Contact</a>
             </nav>
           </div>
       </section>
@@ -37,8 +51,8 @@ export default function Portfolio() {
             </div>
             <div className="bg-gradient-to-r from-blue-50 to-emerald-50 p-6 rounded-lg text-left mb-8 sm:mb-4">
               <p className="text-gray-700 leading-relaxed">
-                Aspiring data engineer and full-stack web developer with hands-on industry experience at Fingrid Datahub. 
-                Currently completing a Master's Thesis on data analytics platform design for Datahub reporting as a full-time role at Fingrid. 
+                Aspiring data engineer and full-stack web developer with hands-on industry experience at Fingrid Datahub. <br />
+                Currently completing a Master's Thesis on data analytics platform design for Datahub reporting as a full-time role at Fingrid. <br />
                 Skilled in big data technologies and modern web development, with a strong interest in building scalable, data-driven systems.
               </p>
             </div>
@@ -76,7 +90,7 @@ export default function Portfolio() {
                     <span className="text-gray-600 italic px-2 py-1 rounded text-sm">04/2025 - 11/2025</span>
                   </div>
                   <p className="text-gray-700 mb-4">
-                    Working on a Master's Thesis: designing an enterprise-scale data analytics platform for 
+                    Working on a Master's Thesis: designing a data analytics platform for 
                     terabyte-scale electricity market data. Thesis explores modern data platform design principles, 
                     best practices and relevant enabling technologies.
                   </p>
@@ -92,7 +106,7 @@ export default function Portfolio() {
                     <div>
                       <h6 className="font-semibold text-gray-900 mb-2">Technologies:</h6>
                       <div className="flex flex-wrap gap-2">
-                        {['Hadoop', 'Hive', 'Spark', 'Flink', 'Kafka', 'GCP', 'AWS', 'Azure', 'Snowflake', 'Databricks'].map(tech => (
+                        {['Hadoop', 'Hive', 'HBase', 'Spark', 'Flink', 'Kafka', 'GCP', 'AWS', 'Azure', 'Snowflake', 'Databricks'].map(tech => (
                           <span key={tech} className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm">
                             {tech}
                           </span>
@@ -153,7 +167,7 @@ export default function Portfolio() {
                 <p className="text-gray-700 mb-4">
                   Gained hands-on experience in platform design and development of core services for big data storage, batch and stream data 
                   ingestion (ETL) & processing, and managing big data.
-                  Implemented real-time analytics and data quality monitoring. Deployed in GCP.
+                  Implemented job scheduling, real-time analytics and data quality monitoring. Deployed in GCP.
                 </p>
                 <div className="space-y-3">
                   <div>
@@ -177,6 +191,32 @@ export default function Portfolio() {
                     </div>
                   </div>
                 </div>
+                <div className='hidden xl:block xl:mt-4'>
+                  {arc_isOpen && (
+                      <div
+                        className="fixed inset-0 bg-black/40 backdrop-blur-md z-40 flex items-center justify-center"
+                        onClick={() => arc_setIsOpen(false)}
+                      >
+                        <img
+                          className="max-w-[90%] max-h-[90%] rounded shadow-lg z-50"
+                          src={arc}
+                          alt="Lambda architecture"
+                        />
+                      </div>
+                    )}
+
+                    <div className="bg-gray-50 rounded-lg p-2 flex items-center justify-center">
+                      {!arc_isOpen && (
+                        <img
+                          className="rounded object-cover cursor-pointer shadow"
+                          src={arc}
+                          alt="Lambda architecture"
+                          onClick={() => arc_setIsOpen(true)}
+                        />
+                      )}
+                    </div>
+                  </div>
+
                 <div className="mt-4 inline-flex items-center gap-2">
                   <Github size={16} />
                   <a href="https://github.com/hamalainenilmari/big-data-platform" 
@@ -210,21 +250,48 @@ export default function Portfolio() {
                   <div>
                     <h6 className="font-semibold text-gray-900 mb-2">Backend & DevOps:</h6>
                     <div className="flex flex-wrap gap-2">
-                      {['Node.js', 'Express.js', 'PostgreSQL', 'MongoDB', 'Docker', 'Redis', 'Kubernetes', 'Nginx', 'JWT', 
-                      'Vercel', 'Postman', 'Playwright', 'Jest', 'ESLint', 'Prettier'].map(tech => (
+                      {['Node.js', 'Express.js', 'PostgreSQL', 'MongoDB', 'Docker', 'Redis', 'Kubernetes', 'Nginx', 
+                      'Vercel', 'Postman', 'Playwright', 'ESLint', 'Prettier'].map(tech => (
                         <span key={tech} className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm">
                           {tech}
                         </span>
                       ))}
                     </div>
+                    
                   </div>
                 </div>
                 <div className="mt-4">
                   <h6 className="font-semibold text-gray-900 mb-2">Completed Courses (All Grade 5):</h6>
                   <ul className="text-sm text-gray-600 space-y-1">
-                    <li>• <a href="https://fitech101.aalto.fi/fi/courses/web-software-development" >Web Software Development </a> </li>
-                    <li>• <a href="https://fullstackopen.com/en/about/" >Full Stack Web Development </a></li>
-                    <li>• <a href='https://fitech101.aalto.fi/fi/courses/designing-and-building-scalable-web-applications' > Designing and Building Scalable Web Applications </a></li>
+                    <a href="https://fitech101.aalto.fi/fi/courses/web-software-development" >Web Software Development </a>
+                    <p className='font-extralight'>
+                      Web application fundamentals with JavaScript, Deno, Svelte, server- and client-side development, and testing
+                    </p>
+                    <a href="https://fullstackopen.com/en/about/" >Full Stack Web Development </a>
+                    <p className='font-extralight'>
+                      Modern web development with React, Node.js, REST APIs, and GraphQL
+                    </p>
+
+                    <a href='https://fitech101.aalto.fi/fi/courses/designing-and-building-scalable-web-applications' > 
+                    Designing and Building Scalable Web Applications </a>
+                    <div className="font-extralight ">
+                      <p>
+                        Scalable web app design covering core scalability concepts, Astro, Kubernetes, 
+                        cloud computing, load balancing and ML.<br />
+                      </p>
+                      
+                     <div className='items-baseline'>
+                        <span className='font-medium'>Project: </span> 
+                        Scalable programming exercise 
+                        platform with authentication, automated grading, 
+                        and ML-powered code grading
+                        <div className='inline-flex gap-2 pl-2'>
+                          <Github size={16} />
+                          <a href="https://github.com/hamalainenilmari/dab-project">Github</a>
+                        </div>
+  
+                      </div>
+                    </div>
                   </ul>
                 </div>
               </div>
@@ -296,12 +363,57 @@ export default function Portfolio() {
                   ))}
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                  <div className="bg-gray-50 rounded-lg p-2 flex items-center justify-center">
-                      <img className='rounded h-80' src={betapp} alt="Shed pic" />
+
+                  {betapp_isOpen && (
+                      <div
+                        className="fixed inset-0 bg-black/40 backdrop-blur-md z-40 flex items-center justify-center"
+                        onClick={() => betapp_setIsOpen(false)}
+                      >
+                        <img
+                          className="max-w-[90%] max-h-[90%] rounded shadow-lg z-50"
+                          src={betapp}
+                          alt="App UI for making predictions"
+                        />
+                      </div>
+                    )}
+
+                    <div className="bg-gray-50 rounded-lg p-2 flex items-center justify-center">
+                      {!betapp_isOpen && (
+                        <img
+                          className="rounded h-80 object-cover cursor-pointer shadow"
+                          src={betapp}
+                          alt="App UI for making predictions"
+                          onClick={() => betapp_setIsOpen(true)}
+                        />
+                      )}
+                    </div>
+
+                  <div className="relative">
+                    {table_isOpen && (
+                      <div
+                        className="fixed inset-0 bg-black/40 backdrop-blur-md z-40 flex items-center justify-center"
+                        onClick={() => table_setIsOpen(false)}
+                      >
+                        <img
+                          className="max-w-[90%] max-h-[90%] rounded shadow-lg z-50"
+                          src={betapp_table}
+                          alt="Shed pic"
+                        />
+                      </div>
+                    )}
+
+                    <div className="bg-gray-50 rounded-lg p-2 flex items-center justify-center">
+                      {!table_isOpen && (
+                        <img
+                          className="rounded h-80 object-cover cursor-pointer shadow"
+                          src={betapp_table}
+                          alt="Shed pic"
+                          onClick={() => table_setIsOpen(true)}
+                        />
+                      )}
+                    </div>
                   </div>
-                  <div className="bg-gray-50 rounded-lg p-2 flex items-center justify-center">
-                      <img className='rounded h-80' src={betapp_table} alt="Shed pic" />
-                  </div>
+
                 </div>
                 <div className="inline-flex items-center gap-2 mt-2">
                   <Github size={16} />
@@ -332,12 +444,59 @@ export default function Portfolio() {
                   ))}
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                  <div className="bg-gray-50 rounded-lg p-2 flex items-center justify-center">
-                      <img className='rounded' src={shed} alt="Shed pic" />
+
+                  <div className="relative">
+                    {shed_isOpen && (
+                      <div
+                        className="fixed inset-0 bg-black/40 backdrop-blur-md z-40 flex items-center justify-center"
+                        onClick={() => shed_setIsOpen(false)}
+                      >
+                        <img
+                          className="max-w-[90%] max-h-[90%] rounded shadow-lg z-50"
+                          src={shed}
+                          alt="Shed pic"
+                        />
+                      </div>
+                    )}
+
+                    <div className="bg-gray-50 rounded-lg p-2 flex items-center justify-center">
+                      {!shed_isOpen && (
+                        <img
+                          className="rounded object-cover cursor-pointer shadow"
+                          src={shed}
+                          alt="Shed pic"
+                          onClick={() => shed_setIsOpen(true)}
+                        />
+                      )}
+                    </div>
                   </div>
-                  <div className="bg-gray-50 rounded-lg p-2 flex items-center justify-center">
-                      <img className='rounded' src={sponza} alt="Shed pic" />
+
+                  <div className="relative">
+                    {sponza_isOpen && (
+                      <div
+                        className="fixed inset-0 bg-black/40 backdrop-blur-md z-40 flex items-center justify-center"
+                        onClick={() => sponza_setIsOpen(false)}
+                      >
+                        <img
+                          className="max-w-[90%] max-h-[90%] rounded shadow-lg z-50"
+                          src={sponza}
+                          alt="Sponza pic"
+                        />
+                      </div>
+                    )}
+
+                    <div className="bg-gray-50 rounded-lg p-2 flex items-center justify-center">
+                      {!sponza_isOpen && (
+                        <img
+                          className="rounded object-cover cursor-pointer shadow"
+                          src={sponza}
+                          alt="Sponza pic"
+                          onClick={() => sponza_setIsOpen(true)}
+                        />
+                      )}
+                    </div>
                   </div>
+
                 </div>
                 <div className="inline-flex items-center gap-2 mt-2">
                   <Github size={16} />
