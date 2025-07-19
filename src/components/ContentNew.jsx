@@ -21,11 +21,15 @@ export default function Portfolio() {
     <div className='sm:text-sm'>
       <section id="header" className='w-full bg-white shadow-sm border-b border-gray-200'>
           <div className="flex flex-col py-4 sm:items-center">
-            <h1 className="text-center font-bold text-gray-900">Ilmari Hämäläinen</h1>
-            <p className="text-2xl text-center sm:text-2xl font-medium text-gray-900 mb-3 tracking-tight sm:mb-3">
+            <h1 className="flex flex-col items-center sm:flex-row sm:items-center sm:justify-center gap-1 font-bold text-gray-900">
+              <span className="block sm:inline">Ilmari</span>
+              <span className="block sm:inline ml-0 sm:ml-1">Hämäläinen</span>
+            </h1>
+            <p className="text-2xl text-center sm:text-2xl font-medium text-gray-900 mt-2 sm:mt-0 mb-3 tracking-tight sm:mb-3">
               Data Engineering & Full-Stack Web Development
             </p>
-            <nav className="flex justify-center flex-row space-x-6 pt-1 sm:space-x-10 sm:justify-end">
+
+            <nav className="flex justify-center flex-row pt-1 gap-2 sm:gap-10 sm:justify-end p-1">
               <a href="#about" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">About</a>
               <a href="#experience" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">Experience</a>
               <a href="#expertise" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">Expertise</a>
@@ -548,14 +552,14 @@ export default function Portfolio() {
         </section>
       </div>
 
-      <section id="footer" className="w-full pt-6 pb-2 sm:py-8 bg-gradient-to-r from-blue-50 to-emerald-50">
+      <section id="footer" className="w-full pt-4 pb-2 sm:py-8 bg-gradient-to-r from-blue-50 to-emerald-50">
         <div className="px-4 text-center">
           <h3 className="text-3xl font-bold text-gray-900 mb-4">Let's Build Something Great Together</h3>
-          <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 mb-4 max-w-3xl mx-auto">
             I am seeking Data Engineering or Full-Stack Web Development opportunities where I can leverage my 
             expertise in scalable data platforms, modern web technologies, and cloud-native architectures.
           </p>
-          <div className="flex flex-wrap justify-center py-3 flex-row space-x-2 sm:space-x-8  sm:py-0">
+          <div className="flex flex-wrap pt-2 justify-center py-3 flex-row space-x-2 sm:space-x-8 sm:py-0">
             <a 
               href='https://www.linkedin.com/in/ilmari-h%C3%A4m%C3%A4l%C3%A4inen-8a3670260/' 
               className="bg-white hover:bg-gray-50 text-gray-700 px-8 rounded-lg border py-2 border-gray-200 flex items-center gap-2">
@@ -568,7 +572,7 @@ export default function Portfolio() {
               Github
             </a>
             <p 
-            className="flex items-center gap-2">
+            className="flex items-center gap-2 pt-2 sm:pt-0">
               <Mail size={20} />
               illmarihamalainen@gmail.com
             </p>
