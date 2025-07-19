@@ -341,7 +341,7 @@ export default function Portfolio() {
                   <h6 className="font-semibold text-gray-900 mb-2">Proficiency:</h6>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {['Python', 'JavaScript', 'TypeScript', 'C++', 'SQL'].map(lang => (
-                      <span key={lang} className="bg-gray-100 text-gray-700 px-3 py-1 rounded font-medium">
+                      <span key={lang} className="bg-gray-100 text-gray-700 px-3 py-1 rounded">
                         {lang}
                       </span>
                     ))}
@@ -552,7 +552,7 @@ export default function Portfolio() {
         </section>
       </div>
 
-      <section id="footer" className="w-full pt-4 pb-2 sm:py-8 bg-gradient-to-r from-blue-50 to-emerald-50">
+      <section id="footer" className="w-full pt-6 pb-2 sm:py-8 bg-gradient-to-r from-blue-50 to-emerald-50">
         <div className="px-4 text-center">
           <h3 className="text-3xl font-bold text-gray-900 mb-4">Let's Build Something Great Together</h3>
           <p className="text-lg text-gray-600 mb-4 max-w-3xl mx-auto">
