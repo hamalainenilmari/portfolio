@@ -47,7 +47,7 @@ export default function Portfolio() {
               </p>
             </div>
             <div className="bg-gradient-to-r from-blue-50 to-emerald-50 p-6 rounded-lg text-left mb-8 sm:mb-4">
-              <div className="text-gray-700 leading-relaxed text-center space-y-2">
+              <div className="text-gray-700 leading-relaxed text-center space-y-2 sm:space-y-0">
                 <p>
                 Aspiring data engineer and full-stack web developer with hands-on industry experience at Fingrid Datahub. <br />
                 </p>
