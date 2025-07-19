@@ -6,11 +6,7 @@ import sponza from "../images/sponza.png";
 import betapp_table from "../images/table.jpg";
 import betapp from "../images/betapp4.jpg";
 import arc from "../images/bdp_hybrid_architecture.png";
-
-
-
 import { useState } from 'react';
-
 
 export default function Portfolio() {
 
@@ -26,6 +22,9 @@ export default function Portfolio() {
       <section id="header" className='w-full bg-white shadow-sm border-b border-gray-200'>
           <div className="flex flex-col py-4 sm:items-center">
             <h1 className="text-center font-bold text-gray-900">Ilmari Hämäläinen</h1>
+            <p className="text-2xl text-center sm:text-2xl font-medium text-gray-900 mb-3 tracking-tight sm:mb-3">
+              Data Engineering & Full-Stack Web Development
+            </p>
             <nav className="flex justify-center flex-row space-x-6 pt-1 sm:space-x-10 sm:justify-end">
               <a href="#about" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">About</a>
               <a href="#experience" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">Experience</a>
@@ -37,34 +36,39 @@ export default function Portfolio() {
       </section>
 
       <div className='sm:max-w-4xl mx-auto'>
-        <section id='hero' className="pt-10 pb-6 sm:py-8">
+        <section id='hero' className="pt-4 pb-6 sm:py-8 sm:pt-4">
           <div className="px-6 text-center">
-            <p className="text-3xl sm:text-3xl font-bold text-gray-900 mb-6 tracking-tight sm:mb-3">
-              Data Engineer & Full-Stack Developer
-            </p>
-            <div className="text-lg text-gray-700 space-y-3 leading-relaxed max-w-xl mx-auto sm:space-y-1 sm:text-base">
+            
+            <div className="text-lg text-gray-700 space-y-2 leading-relaxed max-w-xl mx-auto sm:space-y-1 sm:text-base">
               <p className="font-semibold">Computer Science Master's Student at Aalto University (GPA: 4.4)</p>
               <p className="font-medium">Graduating November 2025</p>
-              <p className="pb-2">
+              <p className="pb-4">
                 Languages: Finnish (native), English (proficient)
               </p>
             </div>
             <div className="bg-gradient-to-r from-blue-50 to-emerald-50 p-6 rounded-lg text-left mb-8 sm:mb-4">
-              <p className="text-gray-700 leading-relaxed">
+              <div className="text-gray-700 leading-relaxed text-center space-y-2">
+                <p>
                 Aspiring data engineer and full-stack web developer with hands-on industry experience at Fingrid Datahub. <br />
-                Currently completing a Master's Thesis on data analytics platform design for Datahub reporting as a full-time role at Fingrid. <br />
-                Skilled in big data technologies and modern web development, with a strong interest in building scalable, data-driven systems.
-              </p>
-            </div>
-              <div className="">
-                <p className="text-lg font-semibold">
-                  Available for opportunities starting <b>December 2025</b>
                 </p>
+                <p>
+                Currently completing a Master's Thesis on data analytics platform design for Datahub reporting as a full-time role at Fingrid. <br />
+                </p>
+                <p>
+                Skilled in big data technologies and modern web development, with a strong interest in building scalable, data-driven systems.
+                </p>
+              </div>
+            </div>
+              <div className="text-lg font-semibold flex flex-col sm:flex-row sm:items-center sm:justify-center gap-1">
+                <p>
+                  Available for opportunities starting 
+                </p>
+                <b>December 2025</b>
             </div>
           </div>
         </section>
 
-        <section id="experience" className="py-6 sm:py-2 bg-white">
+        <section id="experience" className="py-0 sm:py-0 bg-white">
           <div className="mx-auto px-6">
             <h3 className="text-3xl font-bold text-gray-900 mb-4 flex items-center gap-3 sm:text-2xl">
               Professional Experience
@@ -90,8 +94,8 @@ export default function Portfolio() {
                     <span className="text-gray-600 italic px-2 py-1 rounded text-sm">04/2025 - 11/2025</span>
                   </div>
                   <p className="text-gray-700 mb-4">
-                    Working on a Master's Thesis: designing a data analytics platform for 
-                    terabyte-scale electricity market data. Thesis explores modern data platform design principles, 
+                    Working on a Master's Thesis: <b>designing a data analytics platform </b> for 
+                    terabyte-scale electricity market data. Thesis explores modern big data platform design principles, 
                     best practices and relevant enabling technologies.
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -121,17 +125,46 @@ export default function Portfolio() {
                     <h5 className="text-lg font-semibold text-gray-900">Intern</h5>
                     <span className="text-gray-600 italic px-2 py-1 rounded text-sm">2023-2024</span>
                   </div>
+
                   <div className="space-y-4">
                     <div>
                       <h6 className="font-semibold text-gray-900 mb-2">2024: Full-stack Web Development</h6>
                       <p className="text-gray-700 mb-2">
-                        Full-stack web development of Testing and Certification Service of Datahub using Angular, Vue.js, 
-                        Node.js/Express(???), Contentful, Docker, and Kubernetes in industry environment.
+                        Full-stack web development of a <a href='https://sertifiointi.datahub.fi/etusivu'> Testing and Certification 
+                        Service </a> that enables market parties 
+                        to test their systems' compatibility with Datahub by simulating electricity market process flows.
+                        <br />
                       </p>
+
+                      <div>
+                        <h6 className="font-semibold text-gray-900 mb-1 mt-2">Full-Stack:</h6>
+                        <div className="flex flex-wrap gap-2">
+                            {['Typescript', 'Vue.js', 'Svelte', 'Axios', 'Node.js', 'Express.js', 'Contentful CMS', 'Jest'].map(tech => (
+                            <span key={tech} className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm">
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+
+
+                      <div className='mb-2'>
+                        <h6 className="font-semibold text-gray-900 mb-1 mt-2">Infrastructure: </h6>
+                        <div className="flex flex-wrap  gap-2">
+                          {['Docker', 'Kubernetes', 'Nginx', 'Azure', 'Microsoft AAD', 'Microsoft Azure Storage'
+                          ].map(tech => (
+                            <span key={tech} className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm">
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+
                       <p className="text-gray-600 text-sm">
-                        Experienced enterprise CI/CD pipelines, software testing, code reviews, and production deployments in cloud.
+                        Experienced industry software development with agile DevOps, CI/CD pipelines, code reviews, and production deployments in Azure cloud.
                       </p>
                     </div>
+
                     <div>
                       <h6 className="font-semibold text-gray-900 mb-2">2023: System Testing</h6>
                       <p className="text-gray-700">Manual system testing, drawing UML diagrams and so on</p>
@@ -191,7 +224,7 @@ export default function Portfolio() {
                     </div>
                   </div>
                 </div>
-                <div className='hidden xl:block xl:mt-4'>
+                <div className='pt-4 xl:block xl:mt-4'>
                   {arc_isOpen && (
                       <div
                         className="fixed inset-0 bg-black/40 backdrop-blur-md z-40 flex items-center justify-center"
@@ -277,20 +310,20 @@ export default function Portfolio() {
                     <div className="font-extralight ">
                       <p>
                         Scalable web app design covering core scalability concepts, Astro, Kubernetes, 
-                        cloud computing, load balancing and ML.<br />
+                        cloud computing and load balancing<br />
                       </p>
                       
                      <div className='items-baseline'>
                         <span className='font-medium'>Project: </span> 
                         Scalable programming exercise 
                         platform with authentication, automated grading, 
-                        and ML-powered code grading
-                        <div className='inline-flex gap-2 pl-2'>
+                        and ML-powered submission grading
+                        <div className='inline-flex gap-2 pl-2 justify-baseline items-baseline'>
                           <Github size={16} />
                           <a href="https://github.com/hamalainenilmari/dab-project">Github</a>
                         </div>
-  
                       </div>
+
                     </div>
                   </ul>
                 </div>
@@ -515,27 +548,27 @@ export default function Portfolio() {
         </section>
       </div>
 
-      <section id="footer" className="w-full pt-10 pb-2 sm:py-8 bg-gradient-to-r from-blue-50 to-emerald-50">
+      <section id="footer" className="w-full pt-6 pb-2 sm:py-8 bg-gradient-to-r from-blue-50 to-emerald-50">
         <div className="px-4 text-center">
           <h3 className="text-3xl font-bold text-gray-900 mb-4">Let's Build Something Great Together</h3>
           <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
             I am seeking Data Engineering or Full-Stack Web Development opportunities where I can leverage my 
             expertise in scalable data platforms, modern web technologies, and cloud-native architectures.
           </p>
-          <div className="flex flex-wrap justify-center flex-row space-x-2 sm:space-x-8  sm:py-0">
+          <div className="flex flex-wrap justify-center py-3 flex-row space-x-2 sm:space-x-8  sm:py-0">
             <a 
               href='https://www.linkedin.com/in/ilmari-h%C3%A4m%C3%A4l%C3%A4inen-8a3670260/' 
-              className="bg-white hover:bg-gray-50 text-gray-700 px-8 py-3 rounded-lg border border-gray-200 flex items-center gap-2">
+              className="bg-white hover:bg-gray-50 text-gray-700 px-8 rounded-lg border py-2 border-gray-200 flex items-center gap-2">
               <Linkedin size={20} />
               LinkedIn
             </a>
             <a href="https://github.com/hamalainenilmari/" 
-              className="bg-white hover:bg-gray-50 text-black-700 px-8 py-3 rounded-lg border border-gray-200 flex items-center gap-2">
+              className="bg-white hover:bg-gray-50 text-black-700 px-8 rounded-lg border border-gray-200 flex items-center gap-2">
               <Github size={16} />
               Github
             </a>
             <p 
-            className="flex items-center gap-2 py-6">
+            className="flex items-center gap-2">
               <Mail size={20} />
               illmarihamalainen@gmail.com
             </p>
