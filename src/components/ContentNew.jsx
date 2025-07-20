@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, ExternalLink, Mail, Linkedin, Code, Database, Globe, Award } from 'lucide-react';
+import { Github, Mail, Linkedin, Database, Globe, Award, PinIcon } from 'lucide-react';
 import dh from "../images/datahub.png";
 import shed from "../images/shed.png";
 import sponza from "../images/sponza.png";
@@ -29,7 +29,7 @@ export default function Portfolio() {
               Data Engineering & Full-Stack Web Development
             </p>
 
-            <nav className="flex justify-center flex-row pt-1 gap-2 sm:gap-10 sm:justify-end p-1">
+            <nav className="flex justify-center flex-row pt-1 gap-4 sm:gap-10 sm:justify-end p-1">
               <a href="#about" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">About</a>
               <a href="#experience" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">Experience</a>
               <a href="#expertise" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">Expertise</a>
@@ -46,8 +46,12 @@ export default function Portfolio() {
             <div className="text-lg text-gray-700 space-y-2 leading-relaxed max-w-xl mx-auto sm:space-y-1 sm:text-base">
               <p className="font-semibold">Computer Science Master's Student at Aalto University (GPA: 4.4)</p>
               <p className="font-medium">Graduating November 2025</p>
-              <p className="pb-4">
+              <p className="">
                 Languages: Finnish (native), English (proficient)
+              </p>
+              <p className="pb-4 inline-flex items-center gap-2">
+                <PinIcon size={20} color="#ff0000" fill="#ff0000"  />
+                Helsinki
               </p>
             </div>
             <div className="bg-gradient-to-r from-blue-50 to-emerald-50 p-6 rounded-lg text-left mb-8 sm:mb-4">
@@ -88,10 +92,7 @@ export default function Portfolio() {
                   <p className="text-gray-700 mb-2">
                   Datahub is a centralized data exchange system for electricity retail market of Finland
                   </p>
-                  <p className="text-gray-700">
-                  I worked full-time during the summers of 2023 and 2024, and part-time 
-                  alongside my studies during the academic years.
-                  </p>
+                  
                 <div className="border-l-4 border-blue-500 pl-6">
                   <div className="flex items-baseline gap-2 mb-2">
                     <h5 className="text-lg font-semibold text-gray-900">Thesis Worker</h5>
@@ -100,7 +101,9 @@ export default function Portfolio() {
                   <p className="text-gray-700 mb-4">
                     Working on a Master's Thesis: <b>designing a data analytics platform </b> for 
                     terabyte-scale electricity market data. Thesis explores modern big data platform design principles, 
-                    best practices and relevant enabling technologies.
+                    best practices and relevant technologies for enabling efficient execution of
+                    analytical workloads and flexible data product delivery.
+                    
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
@@ -125,18 +128,24 @@ export default function Portfolio() {
                 </div>
 
                 <div className="border-l-4 border-blue-500 pl-6">
-                  <div className="flex items-baseline gap-2 mb-2">
-                    <h5 className="text-lg font-semibold text-gray-900">Intern</h5>
-                    <span className="text-gray-600 italic px-2 py-1 rounded text-sm">2023-2024</span>
+                  <div>
+                    <div className="flex items-baseline gap-2 mb-2">
+                      <h5 className="text-lg font-semibold text-gray-900">Intern</h5>
+                      <span className="text-gray-600 italic px-2 py-1 rounded text-sm">2023-2024</span>
+                    </div>
+                    <p className="text-gray-700 italic mb-2">
+                      Worked full-time during the summers of 2023 and 2024, and part-time 
+                      during the academic years.
+                    </p>
                   </div>
 
                   <div className="space-y-4">
                     <div>
-                      <h6 className="font-semibold text-gray-900 mb-2">2024: Full-stack Web Development</h6>
+                      <h6 className="font-bold text-gray-900 mb-2">2024: Full-stack Web Development</h6>
                       <p className="text-gray-700 mb-2">
                         Full-stack web development of a <a href='https://sertifiointi.datahub.fi/etusivu'> Testing and Certification 
-                        Service </a> that enables market parties 
-                        to test their systems' compatibility with Datahub by simulating electricity market process flows.
+                        Service </a> that enables nearly 200 market parties to test their systems' compatibility with 
+                        Datahub by simulating electricity market process flows.
                         <br />
                       </p>
 
@@ -170,7 +179,7 @@ export default function Portfolio() {
                     </div>
 
                     <div>
-                      <h6 className="font-semibold text-gray-900 mb-2">2023: System Testing</h6>
+                      <h6 className="font-bold text-gray-900 mb-2">2023: System Testing</h6>
                       <p className="text-gray-700">Manual system testing, drawing UML diagrams and so on</p>
                     </div>
                   </div>
@@ -202,9 +211,12 @@ export default function Portfolio() {
                   </p>
                 </div>
                 <p className="text-gray-700 mb-4">
-                  Gained hands-on experience in platform design and development of core services for big data storage, batch and stream data 
-                  ingestion (ETL) & processing, and managing big data.
-                  Implemented job scheduling, real-time analytics and data quality monitoring. Deployed in GCP.
+                  Gained practical experience in designing and developing core services for big data platforms, including
+                  storage, batch and stream data ingestion & processing (ETL), and big data management.
+                  Implemented end-to-end data pipelines supporting real-time ingestion and processing (≈200 records/s)
+                  and batch ingestion (≈2000 records/s) in a resource-constrained environment.
+                  Included tenant-specific SLAs, job scheduling, real-time analytics and data quality monitoring. 
+                  Deployed in <b>Google Cloud Platform</b>.
                 </p>
                 <div className="space-y-3">
                   <div>
@@ -258,7 +270,7 @@ export default function Portfolio() {
                   <Github size={16} />
                   <a href="https://github.com/hamalainenilmari/big-data-platform" 
                     className=" text-blue-600 hover:text-blue-700 transition-colors">
-                    Github Repository
+                    Repository
                   </a>
                 </div>
               </div>
@@ -298,7 +310,7 @@ export default function Portfolio() {
                   </div>
                 </div>
                 <div className="mt-4">
-                  <h6 className="font-semibold text-gray-900 mb-2">Completed Courses (All Grade 5):</h6>
+                  <h6 className="font-semibold text-gray-900 mb-2">Relevant Courses (All Grade 5):</h6>
                   <ul className="text-sm text-gray-600 space-y-1">
                     <a href="https://fitech101.aalto.fi/fi/courses/web-software-development" >Web Software Development </a>
                     <p className='font-extralight'>
@@ -324,7 +336,7 @@ export default function Portfolio() {
                         and ML-powered submission grading
                         <div className='inline-flex gap-2 pl-2 justify-baseline items-baseline'>
                           <Github size={16} />
-                          <a href="https://github.com/hamalainenilmari/dab-project">Github</a>
+                          <a href="https://github.com/hamalainenilmari/dab-project">Repository</a>
                         </div>
                       </div>
 
@@ -336,7 +348,7 @@ export default function Portfolio() {
 
             <div className="mt-8 bg-white rounded-lg shadow-sm border border-gray-200 p-6">
               <h4 className="text-xl font-semibold text-gray-900 mb-4">Programming Languages & CS Core Skills</h4>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                   <h6 className="font-semibold text-gray-900 mb-2">Proficiency:</h6>
                   <div className="flex flex-wrap gap-2 mb-4">
@@ -380,20 +392,24 @@ export default function Portfolio() {
 
         <section id="projects" className="py-6 sm:pt-2 bg-white">
           <div className="mx-auto px-6">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4 sm:text-2xl">Other Cool Projects</h3>
+            <h3 className="text-3xl font-bold text-gray-900 mb-4 sm:text-2xl">Additional Projects</h3>
             <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
               
               <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow duration-200">
                 <div className="flex items-center gap-3 mb-4">
                   <h4 className="text-xl font-semibold text-gray-900">Football Match Prediction Web App</h4>
                 </div>
-                <p className="text-gray-600 mb-4">
-                  I developed and deployed a football match prediction app for UEFA Euro 2024 with 9 active users.
-                  App featured authentication, automatic match result fetching, 
-                  user predictions, and a scoring system.
-                </p>
+                <div className="text-gray-600 mb-4">
+                  <p>
+                    I developed and deployed a football match prediction making app for UEFA Euro 2024 with 9 active users.
+                  </p>
+                  <p>
+                    App featured authentication, automatic match information fetching, 
+                    user predictions, scoring system and user rankings.
+                  </p>
+                </div>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {['React', 'Express', 'MongoDB', 'Vercel'].map(tech => (
+                  {['React', 'Express', 'MongoDB', 'Vercel', 'Cron'].map(tech => (
                     <span key={tech} className="bg-gray-50 text-gray-700 px-2 py-1 rounded text-sm">
                       {tech}
                     </span>
@@ -557,7 +573,7 @@ export default function Portfolio() {
           <h3 className="text-3xl font-bold text-gray-900 mb-4">Let's Build Something Great Together</h3>
           <p className="text-lg text-gray-600 mb-4 max-w-3xl mx-auto">
             I am seeking Data Engineering or Full-Stack Web Development opportunities where I can leverage my 
-            expertise in scalable data platforms, modern web technologies, and cloud-native architectures.
+            expertise in scalable data platforms, modern web technologies, and big data architectures.
           </p>
           <div className="flex flex-wrap pt-2 justify-center py-3 flex-row space-x-2 sm:space-x-8 sm:py-0">
             <a 
