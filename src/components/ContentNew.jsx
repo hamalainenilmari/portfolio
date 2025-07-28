@@ -44,7 +44,7 @@ export default function Portfolio() {
           <div className="px-6 text-center">
             
             <div className="text-lg text-gray-700 space-y-2 leading-relaxed max-w-xl mx-auto sm:space-y-1 sm:text-base">
-              <p className="font-semibold">Computer Science Master's Student at Aalto University (GPA: 4.4)</p>
+              <p className="font-semibold">Master's student in Computer Science at Aalto University (GPA: 4.4)</p>
               <p className="font-medium">Graduating November 2025</p>
               <p className="">
                 Languages: Finnish (native), English (proficient)
@@ -57,10 +57,10 @@ export default function Portfolio() {
             <div className="bg-gradient-to-r from-blue-50 to-emerald-50 p-6 rounded-lg text-left mb-8 sm:mb-4">
               <div className="text-gray-700 leading-relaxed text-center space-y-2 sm:space-y-0">
                 <p>
-                Aspiring data engineer and full-stack web developer with hands-on industry experience at Fingrid Datahub. <br />
+                An early-career data engineer and full-stack web developer with hands-on industry experience at Fingrid Datahub. <br />
                 </p>
                 <p>
-                Currently completing a Master's Thesis on data analytics platform design for Datahub reporting as a full-time role at Fingrid. <br />
+                Currently completing a Master's thesis on designing a big data platform for metering data analysis at Datahub. <br />
                 </p>
                 <p>
                 Skilled in big data technologies and modern web development, with a strong interest in building scalable, data-driven systems.
@@ -90,18 +90,19 @@ export default function Portfolio() {
               <div className="space-y-6">
                   <p className="text-gray-600 italic mb-2">2023 - present</p>
                   <p className="text-gray-700 mb-2">
-                  Datahub is a centralized data exchange system for electricity retail market of Finland
+                  Datahub is a centralized data exchange system for the electricity retail market of Finland
                   </p>
                   
                 <div className="border-l-4 border-blue-500 pl-6">
                   <div className="flex items-baseline gap-2 mb-2">
-                    <h5 className="text-lg font-semibold text-gray-900">Thesis Worker</h5>
+                    <h5 className="text-lg font-semibold text-gray-900">Master's Thesis Worker</h5>
                     <span className="text-gray-600 italic px-2 py-1 rounded text-sm">04/2025 - 11/2025</span>
                   </div>
                   <p className="text-gray-700 mb-4">
-                    Working on a Master's Thesis: <b>designing a data analytics platform </b> for 
-                    terabyte-scale electricity market data. Thesis explores modern big data platform design principles, 
-                    best practices and relevant technologies for enabling efficient execution of
+                    <b>Designing a data analytics platform </b> for 
+                    terabyte-scale electricity market data. The research explores modern big data platform design 
+                    principles 
+                    and technologies to architect a scalable platform enabling large-scale
                     analytical workloads and flexible data product delivery.
                     
                   </p>
@@ -109,15 +110,15 @@ export default function Portfolio() {
                     <div>
                       <h6 className="font-semibold text-gray-900 mb-2">Core Research Areas:</h6>
                       <ul className="text-gray-600 space-y-1 text-sm">
-                        <li>• Data platform core layers: data ingestion, storage, processing, serving</li>
+                        <li>• Data platform core layers: data ingestion, storage, processing, presentation</li>
                         <li>• Platform architectures: data warehouse, data lake, lakehouse</li>
-                        <li>• Data integration & processing: batch, stream, ETL, Change Data Capture</li>
+                        <li>• Data integration approaches: batch, stream, ETL, Change Data Capture</li>
                       </ul>
                     </div>
                     <div>
                       <h6 className="font-semibold text-gray-900 mb-2">Technologies:</h6>
                       <div className="flex flex-wrap gap-2">
-                        {['Hadoop', 'Hive', 'HBase', 'Spark', 'Flink', 'Kafka', 'GCP', 'AWS', 'Azure', 'Snowflake', 'Databricks'].map(tech => (
+                        {['Hadoop', 'HDFS', 'Hive', 'HBase', 'Spark', 'Kafka', 'GCP', 'AWS', 'Azure'].map(tech => (
                           <span key={tech} className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm">
                             {tech}
                           </span>
@@ -144,7 +145,7 @@ export default function Portfolio() {
                       <h6 className="font-bold text-gray-900 mb-2">2024: Full-stack Web Development</h6>
                       <p className="text-gray-700 mb-2">
                         Full-stack web development of a <a href='https://sertifiointi.datahub.fi/etusivu'> Testing and Certification 
-                        Service </a> that enables nearly 200 market parties to test their systems' compatibility with 
+                        Service </a> that enables 200+ market parties to test their systems' compatibility with 
                         Datahub by simulating electricity market process flows.
                         <br />
                       </p>
@@ -152,7 +153,7 @@ export default function Portfolio() {
                       <div>
                         <h6 className="font-semibold text-gray-900 mb-1 mt-2">Full-Stack:</h6>
                         <div className="flex flex-wrap gap-2">
-                            {['Typescript', 'Vue.js', 'Svelte', 'Axios', 'Node.js', 'Express.js', 'Contentful CMS', 'Jest'].map(tech => (
+                            {['TypeScript', 'Vue.js', 'Svelte', 'Axios', 'Node.js', 'Express.js', 'Contentful CMS', 'Jest'].map(tech => (
                             <span key={tech} className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm">
                               {tech}
                             </span>
@@ -174,13 +175,13 @@ export default function Portfolio() {
                       </div>
 
                       <p className="text-gray-600 text-sm">
-                        Experienced industry software development with agile DevOps, CI/CD pipelines, code reviews, and production deployments in Azure cloud.
+                        Gained hands-on experience in industry software development with agile DevOps, CI/CD pipelines, code reviews, and production deployments in Azure cloud.
                       </p>
                     </div>
 
                     <div>
                       <h6 className="font-bold text-gray-900 mb-2">2023: System Testing</h6>
-                      <p className="text-gray-700">Manual system testing, drawing UML diagrams and so on</p>
+                      <p className="text-gray-700">Manual system testing and drawing UML diagrams</p>
                     </div>
                   </div>
                 </div>
@@ -195,7 +196,7 @@ export default function Portfolio() {
               Technical Expertise & Education
             </h3>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
                 <div className="flex items-center gap-3 mb-4">
                   <Database size={24} />
@@ -215,7 +216,7 @@ export default function Portfolio() {
                   storage, batch and stream data ingestion & processing (ETL), and big data management.
                   Implemented end-to-end data pipelines supporting real-time ingestion and processing (≈200 records/s)
                   and batch ingestion (≈2000 records/s) in a resource-constrained environment.
-                  Included tenant-specific SLAs, job scheduling, real-time analytics and data quality monitoring. 
+                  Included tenant-specific SLAs, job scheduling, real-time analytics, and data quality monitoring. 
                   Deployed in <b>Google Cloud Platform</b>.
                 </p>
                 <div className="space-y-3">
@@ -282,8 +283,8 @@ export default function Portfolio() {
                 </div>
                 <p className="text-gray-700 mb-4">
                   Several years of experience building modern web applications through academic projects and industry work. 
-                  Skilled in building scalable, micro-services based applications through RESTful APIs. Experience in testing and monitoring.
-                  Proficiency in version control with Git, Github and Gitlab.
+                  Skilled in building scalable, microservices-based applications with RESTful APIs. Experience in testing and monitoring.
+                  Proficiency in version control with Git, GitHub and GitLab.
                 </p>
                 <div className="space-y-3">
                   <div>
@@ -300,7 +301,7 @@ export default function Portfolio() {
                     <h6 className="font-semibold text-gray-900 mb-2">Backend & DevOps:</h6>
                     <div className="flex flex-wrap gap-2">
                       {['Node.js', 'Express.js', 'PostgreSQL', 'MongoDB', 'Docker', 'Redis', 'Kubernetes', 'Nginx', 
-                      'Vercel', 'Postman', 'Playwright', 'ESLint', 'Prettier'].map(tech => (
+                      'Vercel', 'Postman', 'Playwright', 'ESLint', 'Prettier', 'CI/CD'].map(tech => (
                         <span key={tech} className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm">
                           {tech}
                         </span>
@@ -318,15 +319,15 @@ export default function Portfolio() {
                     </p>
                     <a href="https://fullstackopen.com/en/about/" >Full Stack Web Development </a>
                     <p className='font-extralight'>
-                      Modern web development with React, Node.js, REST APIs, and GraphQL
+                      Modern web development with React, TypeScript, Node.js, REST APIs, and GraphQL
                     </p>
 
                     <a href='https://fitech101.aalto.fi/fi/courses/designing-and-building-scalable-web-applications' > 
                     Designing and Building Scalable Web Applications </a>
                     <div className="font-extralight ">
                       <p>
-                        Scalable web app design covering core scalability concepts, Astro, Kubernetes, 
-                        cloud computing and load balancing<br />
+                        Scalable web app design with core scalability concepts, Astro, Docker, Kubernetes, 
+                        cloud computing and load balancing with Traefik<br />
                       </p>
                       
                      <div className='items-baseline'>
@@ -352,7 +353,7 @@ export default function Portfolio() {
                 <div>
                   <h6 className="font-semibold text-gray-900 mb-2">Proficiency:</h6>
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {['Python', 'JavaScript', 'TypeScript', 'C++', 'SQL'].map(lang => (
+                    {['Python', 'JavaScript', 'TypeScript', 'SQL'].map(lang => (
                       <span key={lang} className="bg-gray-100 text-gray-700 px-3 py-1 rounded">
                         {lang}
                       </span>
@@ -360,9 +361,17 @@ export default function Portfolio() {
                   </div>
                   <h6 className="font-semibold text-gray-900 mb-2">Experience in:</h6>
                   <div className="flex flex-wrap gap-2">
-                    {['C', 'Scala', 'Shell/Bash'].map(lang => (
+                    {['C', 'C++', 'Scala', 'Shell/Bash'].map(lang => (
                       <span key={lang} className="bg-gray-50 text-gray-600 px-3 py-1 rounded">
                         {lang}
+                      </span>
+                    ))}
+                  </div>
+                  <h6 className="font-semibold text-gray-900 mt-2 mb-2">Databases:</h6>
+                  <div className="flex flex-wrap gap-2">
+                    {['MySQL', 'PostgreSQL', 'MongoDB', 'Cassandra'].map(env => (
+                      <span key={env} className="bg-gray-50 text-gray-600 px-3 py-1 rounded">
+                        {env}
                       </span>
                     ))}
                   </div>
@@ -378,11 +387,12 @@ export default function Portfolio() {
                 <div>
                   <h6 className="font-semibold text-gray-900 mb-2">Theory:</h6>
                   <ul className="text-gray-600 space-y-1 text-sm">
-                    <li>• Computer architecture & OS</li>
-                    <li>• Networking</li>
+                    <li>• Operating Systems</li>
                     <li>• Algorithm design and analysis</li>
+                    <li>• Data Structures</li>
                     <li>• Information security fundamentals</li>
                     <li>• Concurrent programming</li>
+                    <li>• Networking</li>
                   </ul>
                 </div>
               </div>
@@ -405,7 +415,7 @@ export default function Portfolio() {
                   </p>
                   <p>
                     App featured authentication, automatic match information fetching, 
-                    user predictions, scoring system and user rankings.
+                    user predictions, scoring system, and user rankings.
                   </p>
                 </div>
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -486,7 +496,7 @@ export default function Portfolio() {
                   <h4 className="text-xl font-semibold text-gray-900">Computer Graphics</h4>
                 </div>
                 <p className="text-gray-600 mb-4">
-                  Excelled in Jaakko Lehtinen's courses on foundations and advanced graphics focusing on offline ray-tracing. 
+                  Excelled in Jaakko Lehtinen's foundational and advanced graphics courses focusing on offline ray-tracing. 
                   Created photorealistic renderings by writing  linear algebra based advanced lighting algorithms in C++.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -585,7 +595,7 @@ export default function Portfolio() {
             <a href="https://github.com/hamalainenilmari/" 
               className="bg-white hover:bg-gray-50 text-black-700 px-8 rounded-lg border border-gray-200 flex items-center gap-2">
               <Github size={16} />
-              Github
+              GitHub
             </a>
             <p 
             className="flex items-center gap-2 pt-2 sm:pt-0">
