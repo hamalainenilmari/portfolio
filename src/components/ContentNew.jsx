@@ -57,13 +57,14 @@ export default function Portfolio() {
             <div className="bg-gradient-to-r from-blue-50 to-emerald-50 p-6 rounded-lg text-left mb-8 sm:mb-4">
               <div className="text-gray-700 leading-relaxed text-center space-y-2 sm:space-y-0">
                 <p>
-                An early-career data engineer and full-stack web developer with hands-on industry experience at Fingrid Datahub. <br />
+                Early career data engineer and full-stack web developer with hands-on industry experience at Fingrid Datahub. <br />
                 </p>
                 <p>
-                Currently completing a Master's thesis on designing a big data platform for metering data analysis at Datahub. <br />
+                Currently finalizing a Master's thesis on designing a big data platform for metering data analysis at Datahub. <br />
                 </p>
                 <p>
-                Skilled in big data technologies and modern web development, with a strong interest in building scalable, data-driven systems.
+                  Skilled in big data technologies and modern web development, passionate about
+                  building end-to-end data pipelines that turn complex datasets into meaningful insights.
                 </p>
               </div>
             </div>
@@ -116,9 +117,9 @@ export default function Portfolio() {
                       </ul>
                     </div>
                     <div>
-                      <h6 className="font-semibold text-gray-900 mb-2">Technologies:</h6>
+                      <h6 className="font-semibold text-gray-900 mb-2">Technologies Evaluated:</h6>
                       <div className="flex flex-wrap gap-2">
-                        {['Hadoop', 'HDFS', 'Hive', 'HBase', 'Spark', 'Kafka', 'GCP', 'AWS', 'Azure'].map(tech => (
+                        {['Hadoop', 'HDFS', 'Hive', 'HBase', 'ClickHouse', 'Spark', 'Kafka', 'GCP', 'AWS', 'Azure'].map(tech => (
                           <span key={tech} className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm">
                             {tech}
                           </span>
@@ -181,7 +182,7 @@ export default function Portfolio() {
 
                     <div>
                       <h6 className="font-bold text-gray-900 mb-2">2023: System Testing</h6>
-                      <p className="text-gray-700">Manual system testing and drawing UML diagrams</p>
+                      <p className="text-gray-700">Manual system testing and creating UML diagrams</p>
                     </div>
                   </div>
                 </div>
